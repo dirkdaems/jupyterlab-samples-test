@@ -55,5 +55,5 @@ jobs:
           echo Waiting for jupyterlab to start ... 
           sleep 60
           echo Executing tests ...
-          docker exec -it ${container_id} jupyter nbconvert --to notebook --execute /home/jovyan/samples/openeo/basics.ipynb --stdout --ExecutePreprocessor.kernel_name=openeo --ExecutePreprocessor.timeout=600
+          docker exec ${container_id} jupyter nbconvert --to notebook --execute /home/jovyan/samples/openeo/basics.ipynb --stdout --ExecutePreprocessor.kernel_name=openeo --ExecutePreprocessor.timeout=600
           docker stop ${container_id}
