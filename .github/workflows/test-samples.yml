@@ -51,6 +51,9 @@ jobs:
       - name: Test notebook samples
         run: |
           container_id=`docker run -d --rm registry-public.cloudferro.com/jupyterhub/vito/lab:20230426-27`
+          echo Started container ${container_id}
+          echo Waiting for jupyterlab to start ... 
           sleep 60
+          echo Executing tests ...
           docker exec -it ${container_id} jupyter nbconvert --to notebook --execute /home/jovyan/samples/openeo/basics.ipynb --stdout --ExecutePreprocessor.kernel_name=openeo --ExecutePreprocessor.timeout=600
           docker stop ${container_id}
