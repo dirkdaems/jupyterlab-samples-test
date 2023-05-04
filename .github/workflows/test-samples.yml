@@ -48,3 +48,5 @@ jobs:
           ecr: false
           # Log out from the Docker registry at the end of a job
           logout: true
+      - name: Docker pull
+        run: docker pull registry-public.cloudferro.com/jupyterhub/vito/lab:20230426-27
