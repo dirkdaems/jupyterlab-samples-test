@@ -41,9 +41,9 @@ jobs:
           # Server address of Docker registry. If not set then will default to Docker Hub
           registry: registry-public.cloudferro.com
           # Username used to log against the Docker registry
-          username: $${ secrets.CF_REGISTRU_USERNAME }
+          username: $${ secrets.CF_REGISTRY_USERNAME }
           # Password or personal access token used to log against the Docker registry
-          password: $${ secrets.CF_REGISTRU_PASSWORD }
+          password: $${ secrets.CF_REGISTRY_PASSWORD }
           # Specifies whether the given registry is ECR (auto, true or false)
           ecr: false
           # Log out from the Docker registry at the end of a job
